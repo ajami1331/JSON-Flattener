@@ -1,0 +1,48 @@
+<html>
+  <style>
+    .container {
+      display: flex;
+    }
+  </style>
+  <body class='container'>
+    <button onclick="process()">
+      Process
+    </button>
+    <textarea id="input-area" rows=20 cols=80>
+
+    </textarea>
+
+    <textarea id="output-area" rows=20 cols=80 readonly disabled>
+
+    </textarea>
+  </body>
+  <script>
+    function process() {
+      const input = JSON.parse(document.getElementById('input-area').value);
+      console.log(input);
+      const output = {};
+      const prefix = '';
+      flatten(input, output, prefix);
+      console.log(output)
+      document.getElementById('output-area').value = JSON.stringify(output);
+    }
+
+    function isValue(v) {
+      if (Array.isArray(v) || (v !== null && typeof v === 'object')) {
+        return false;
+      }
+      return true;
+    }
+
+    function flatten(json, result, path) {
+      if (isValue(json)) {
+        result[path] = json;
+        return;
+      }
+      Object.keys(json).forEach((key) => {
+        const newPath = path + (path.length === 0 ? key : ":" + key)
+        flatten(json[key], result, newPath)
+      });
+    }
+  </script>
+</html>
