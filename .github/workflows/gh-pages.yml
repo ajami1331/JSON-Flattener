@@ -19,14 +19,6 @@ jobs:
           url: ${{ secrets.NOTIFY_WEBHOOK }}
           method: 'POST'
           data: '{ "content": "build started ${{ github.event.repository.name }}" }'
-      - name: Restore deps and build
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          cache: 'npm'
-      - run: |
-          npm install
-          npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
