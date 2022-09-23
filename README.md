@@ -2,6 +2,7 @@
 
 [![gh-page](https://github.com/CLown1331/JSON-Flattener/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/CLown1331/JSON-Flattener/actions/workflows/gh-pages.yml)
 
+Try it out: https://clown1331.github.io/JSON-Flattener/
 
 Will flatten with ASP.NET json seperator `:`
 
