@@ -1,8 +1,8 @@
 # JSON-Flattener
 
-[![gh-page](https://github.com/CLown1331/JSON-Flattener/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/CLown1331/JSON-Flattener/actions/workflows/gh-pages.yml)
+[![gh-page](https://github.com/ajami1331/JSON-Flattener/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/ajami1331/JSON-Flattener/actions/workflows/gh-pages.yml)
 
-Try it out: https://clown1331.github.io/JSON-Flattener/
+Try it out: https://ajami1331.github.io/JSON-Flattener/
 
 Will flatten with ASP.NET json seperator `:`
 
